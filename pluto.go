@@ -21,8 +21,8 @@ type firebaseCred struct {
 	AuthProvider  string `json:"auth_provider_x509_cert_url"`
 	ClientCertURL string `json:"client_x509_cert_url"`
 }
-
-func createCredentials() []byte {
+// CreateCredentials : func that builds the JSON firebase creds
+func CreateCredentials() []byte {
 	err := godotenv.Load()
 	if err != nil {
 		fmt.Printf("Error loading .env file: %q", err)
